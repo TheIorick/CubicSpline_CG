@@ -42,6 +42,14 @@ public class CubicSplineCurveController {
         if (points.size() == 1) {
             final Point2D lastPoint = points.get(0);
             graphicsContext.strokeLine(lastPoint.getX(), lastPoint.getY(), clickPoint.getX(), clickPoint.getY());
+        }if (points.size() > 1){
+            graphicsContext.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+            for (Point2D p : points){
+                graphicsContext.fillOval(
+                        clickPoint.getX() - POINT_RADIUS, clickPoint.getY() - POINT_RADIUS,
+                        2 * POINT_RADIUS, 2 * POINT_RADIUS);
+            }
+
         }
         points.add(clickPoint);
     }
