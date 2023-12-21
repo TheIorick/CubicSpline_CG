@@ -7,14 +7,6 @@ public class CubicSpline {
     private double c;
     private double d;
 
-    public CubicSpline(double x, double a, double b, double c, double d) {
-        this.x = x;
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-    }
-
     public CubicSpline(double x, double a) {
         this.x = x;
         this.a = a;
